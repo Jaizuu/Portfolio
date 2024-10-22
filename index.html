@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JM Delgado | Digital Marketing Portfolio</title>
+  
+  <!-- Import Google Font Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="JM Delgado Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">My Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Social Icons -->
+  <div class="social-icons">
+    <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-icon instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-icon linkedin">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <!-- Add more social links as icons -->
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-left">
+      <h1>Transform Your Digital Presence</h1>
+      <p>JM Delgado | Expert in Digital Marketing, Ad Management, and Web Development.</p>
+      <button id="cta-button" class="cta-button">Contact Us</button>
+    </div>
+    <div class="hero-right">
+      <img src="assets/element.png" alt="Digital Marketing Illustration">
+    </div>
+  </section>
+
+  <!-- Brands I've Worked With Section -->
+  <section id="brands">
+    <h2>Brands I've Worked With</h2>
+    <div class="brands-slider">
+      <div class="brand-logo"><img src="assets/tfgm.png" alt="Brand 1"></div>
+      <div class="brand-logo"><img src="assets/qgc.png" alt="Brand 2"></div>
+      <div class="brand-logo"><img src="assets/bmmi.jpg" alt="Brand 3"></div>
+      <div class="brand-logo"><img src="assets/kusina.jpg" alt="Brand 1"></div>
+      <div class="brand-logo"><img src="assets/paluto.png" alt="Brand 2"></div>
+      <div class="brand-logo"><img src="assets/wheeler.jpg" alt="Brand 3"></div>
+      <div class="brand-logo"><img src="assets/jordan.png" alt="Brand 3"></div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <p>I’m a digital marketing freelancer with extensive experience in social media management, ad campaigns, video editing, graphic design, and website development. I've worked with various brands across multiple industries, helping them achieve their marketing goals.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Services</h2>
+    <div class="service-grid">
+      <div class="service">
+        <i class="fas fa-ad"></i>
+        <h3>Social Media Management</h3>
+        <p>Creating content and managing social media presence to grow your audience.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Ad Management</h3>
+        <p>Expert ad campaigns on platforms like Facebook and Google, designed to maximize ROI.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-video"></i>
+        <h3>Video Editing</h3>
+        <p>Professional video editing to tell your brand's story effectively.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Graphic Design</h3>
+        <p>Visually appealing designs that resonate with your target audience.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Website Development</h3>
+        <p>Modern websites with user-friendly designs and clean coding.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Work Section -->
+  <section id="case-studies">
+    <h2>Recent Projects</h2>
+    <div class="case-grid">
+      <div class="case-item" data-target="#modal-freshgen">
+        <h3>FreshGen Media</h3>
+        <p>Video Editor - Contributed to P800 Million in property sales.</p>
+      </div>
+      <div class="case-item" data-target="#modal-qgc">
+        <h3>QGC</h3>
+        <p>Ads Manager - Helped exceed P4M in closing sales.</p>
+      </div>
+      <div class="case-item" data-target="#modal-municipality">
+        <h3>Municipality of Jordan</h3>
+        <p>Currently developing a legislation archive website.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for Case Studies -->
+  <div class="modal" id="modal-freshgen">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>FreshGen Media</h2>
+      <p>Details about the work, video editing contribution, and property sales success.</p>
+    </div>
+  </div>
+  
+  <div class="modal" id="modal-qgc">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>QGC</h2>
+      <p>Details about ad management and exceeding P4M in sales.</p>
+    </div>
+  </div>
+  
+  <div class="modal" id="modal-municipality">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Municipality of Jordan</h2>
+      <p>Details about developing the legislation archive website.</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact-popup">
+      <button id="contactBtn">Get in Touch</button>
+      <div class="modal" id="contactModal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Contact Me</h2>
+          <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 JM Delgado. All rights reserved.</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social-icons">
+        <!-- Social media icons -->
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

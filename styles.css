@@ -1,0 +1,408 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f4f4f4; /* Light gray background */
+  color: #333; /* Dark gray text */
+}
+
+/* Header */
+header {
+  background-color: #333; /* Dark gray background */
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Social Icons */
+.social-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.social-icon {
+  background-color: #ff4747; /* Red background */
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a {
+  text-decoration: none; /* Remove underline */
+}
+
+.social-icons a:hover {
+  text-decoration: none; /* Remove underline on hover as well */
+}
+
+.social-icon:hover {
+  background-color: #d02c2c; /* Darker red on hover */
+  transform: scale(1.1);
+}
+
+.social-icon i {
+  font-size: 24px;
+  color: white;
+}
+
+/* Hero Section */
+#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e1e1e 0%, #b11226 100%); /* Black and red gradient */
+  color: white;
+  padding: 0 50px;
+  flex-wrap: wrap; /* Ensure content wraps on mobile */
+}
+
+#hero h1 {
+  font-size: 5vw; /* Responsive font size */
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+  color: #ffffff;
+  text-align: left;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #f1f1f1;
+}
+
+.cta-button {
+  padding: 15px 40px;
+  background: #e60023;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: #d7001f;
+  transform: scale(1.05);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-left {
+  max-width: 50%;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 450px;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-left, .hero-right {
+    max-width: 100%;
+  }
+
+  .hero-left {
+    text-align: center; /* Center text on mobile */
+    padding: 20px; /* Add some padding for spacing */
+  }
+
+  .hero-right img {
+    margin-top: 20px;
+    max-width: 100%; /* Ensure the image scales down */
+  }
+
+  #hero h1 {
+    font-size: 2rem; /* Smaller heading for mobile */
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Brands Section */
+#brands {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#brands h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333; /* Dark gray text */
+}
+
+.brands-slider {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.brand-logo img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.brand-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* About Section */
+#about {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #333; /* Dark gray text */
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #666; /* Medium gray text */
+}
+
+/* Services Section */
+#services {
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* Very light gray background */
+}
+
+#services h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #333; /* Dark gray text */
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.service {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px) scale(1.05); /* Slight lift effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.service i {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.service h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333; /* Dark gray text */
+}
+
+/* Case Studies Section */
+#case-studies {
+  padding: 50px 20px;
+}
+
+#case-studies h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #333; /* Dark gray text */
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.case-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-item:hover {
+  transform: translateY(-5px) scale(1.05); /* Slight lift effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.modal-content h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border: 1px solid #e60023; /* Red border on focus */
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+.close {
+  color: #333;
+  font-size: 30px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ff6347;
+}
+
+/* Show the modal */
+.is-visible {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.contact-popup button {
+  padding: 12px 20px;
+  background-color: #e60023;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.contact-popup button:hover {
+  background-color: #d7001f;
+  transform: scale(1.05);
+}
+

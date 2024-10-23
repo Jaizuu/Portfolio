@@ -18,31 +18,59 @@ body {
 
 /* Header */
 header {
-  background-color: #333; /* Dark gray background */
+  background-color: #444; /* Darker gray for more contrast */
   color: white;
-  padding: 20px;
+  padding: 15px 50px; /* More padding for a spacious look */
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo img {
-  max-width: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: background-color 0.3s; /* Smooth background change */
 }
 
 nav ul {
   list-style: none;
   display: flex;
-}
-
-nav ul li {
-  margin: 0 15px;
+  gap: 30px; /* Increased spacing between items */
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: 600;
+  padding: 10px 15px; /* Added padding for better clickability */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Hover effects for links */
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light hover background */
+  color: #ff4747; /* Change text color on hover */
+}
+
+/* Active link styling */
+nav ul li a.active {
+  border-bottom: 3px solid #e60023; /* Underline for active link */
+}
+
+/* Media Query for mobile responsiveness */
+@media (max-width: 768px) {
+  header {
+    padding: 15px; /* Adjust padding for mobile */
+    flex-direction: column; /* Stack logo and nav */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack navigation items */
+    align-items: flex-start; /* Align items to the left */
+    gap: 10px; /* Reduced spacing */
+  }
+}
+
+.logo img {
+  max-width: 50px;
 }
 
 /* Social Icons */
@@ -309,6 +337,343 @@ nav ul li a {
   position: relative; /* Enable positioning for the button */
 }
 
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f4f4f4; /* Light gray background */
+  color: #333; /* Dark gray text */
+}
+
+/* Header */
+header {
+  background-color: #333; /* Dark gray background */
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Social Icons */
+.social-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.social-icon {
+  background-color: #ff4747; /* Red background */
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a {
+  text-decoration: none; /* Remove underline */
+}
+
+.social-icons a:hover {
+  text-decoration: none; /* Remove underline on hover as well */
+}
+
+.social-icon:hover {
+  background-color: #d02c2c; /* Darker red on hover */
+  transform: scale(1.1);
+}
+
+.social-icon i {
+  font-size: 24px;
+  color: white;
+}
+
+/* Hero Section */
+#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e1e1e 0%, #b11226 100%); /* Black and red gradient */
+  color: white;
+  padding: 0 50px;
+}
+
+#hero h1 {
+  font-size: 5vw; /* Responsive font size */
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+  color: #ffffff;
+  text-align: left;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #f1f1f1;
+}
+
+.cta-button {
+  padding: 15px 40px;
+  background: #e60023;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: #d7001f;
+  transform: scale(1.05);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-left {
+  max-width: 50%;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 450px;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px; /* Added padding for better mobile spacing */
+  }
+
+  .hero-left, .hero-right {
+    max-width: 100%;
+  }
+
+  .hero-left {
+    text-align: center; /* Center text on mobile */
+  }
+
+  .hero-right img {
+    margin-top: 20px;
+  }
+
+  #hero h1 {
+    font-size: 2.5rem; /* Slightly larger heading for mobile */
+  }
+
+  #hero p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Brands Section */
+#brands {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#brands h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333; /* Dark gray text */
+}
+
+.brands-slider {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.brand-logo img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.brand-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* About Section */
+#about {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #333; /* Dark gray text */
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #666; /* Medium gray text */
+}
+
+/* Services Section */
+#services {
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* Very light gray background */
+}
+
+#services h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #333; /* Dark gray text */
+}
+
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust spacing between services */
+  justify-content: center; /* Center the services */
+}
+
+.service {
+  background-color: #fff; /* Background color for service items */
+  border: 1px solid #ddd; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+  width: 200px; /* Set a fixed width for uniformity */
+  position: relative; /* For positioning icons if needed */
+}
+
+.service i {
+  font-size: 40px; /* Increase icon size */
+  margin-bottom: 10px; /* Space between icon and title */
+  transition: color 0.3s; /* Smooth transition for icon color */
+}
+
+.service h3 {
+  margin: 10px 0; /* Space above and below title */
+}
+
+.service p {
+  color: #666; /* Gray color for description */
+}
+
+/* Hover effects */
+.service:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.service:hover i {
+  color: #ff5722; /* Change icon color on hover */
+}
+
+/* Case Studies Section */
+#case-studies {
+  padding: 50px 20px;
+}
+
+#case-studies h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #333; /* Dark gray text */
+}
+
+.case-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.case-item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 250px; /* Limit the width for consistency */
+}
+
+.case-item:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.case-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.case-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.case-item:hover .case-overlay {
+  opacity: 1;
+}
+
+#contact {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f9f9; /* Light gray background for contact section */
+  position: relative; /* Enable positioning for the button */
+}
+
 .contact-popup {
   position: relative; /* Relative positioning for proper placement */
   display: inline-block; /* Center the button */
@@ -345,16 +710,98 @@ nav ul li a {
   align-items: center;
 }
 
+/* Footer Styles */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #333; /* Dark background */
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .service {
+    width: 90%; /* Full width on small screens */
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.is-visible {
+  display: flex; /* Make modal visible */
+}
+
 .modal-content {
   background-color: white;
   padding: 40px;
   border-radius: 8px;
   max-width: 500px;
-  width: 90%; /* Make the modal width more flexible */
+  width: 90%;
   text-align: center;
   animation: fadeIn 0.5s ease-in-out;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CTA Button Styles */
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff4b2b, #ff416c); /* Gradient background */
+  border: none;
+  border-radius: 30px; /* Rounded corners */
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Hover Effect for CTA Button */
+.cta-button:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* More prominent shadow */
+}
+
+/* Focus State */
+.cta-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 65, 108, 0.5); /* Focus outline */
+}
+
 
 /* Animation for modal */
 @keyframes fadeIn {
